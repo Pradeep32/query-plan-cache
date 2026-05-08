@@ -269,8 +269,7 @@ bash run_challenge.sh
 
 ### Output Screenshot
 
-> **Note:** Below is the captured terminal output from running `run_challenge.sh`. 
-> Take a screenshot of this output in your terminal for submission.
+Below is the actual captured terminal output from running `run_challenge.sh`:
 
 ```
 ============================================================
@@ -307,26 +306,27 @@ bash run_challenge.sh
 
 [INFO] Running com.queryplancache.engine.QueryEngineTest
 
-=== Performance Comparison ===
-Uncached (100 iterations): 1091 ms
-Cached   (100 iterations): 28 ms
-Speedup: 38.9x faster
-Cache stats: CacheStats{hits=99, misses=1, hitRatio=99.0%,
-    evictions=0, invalidations=0, avgHitTime=0.57us, avgMissTime=0.00ms}
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+    -- in com.queryplancache.engine.QueryEngineTest$CacheKeyComputation
 
 === Hit Ratio Test ===
-Total requests: 500
-Hits: 495, Misses: 5
-Hit ratio: 99.0%
+Total requests: 505
+Hits: 495, Misses: 10
+Hit ratio: 98.0%
+
+=== Performance Comparison ===
+Uncached (100 iterations): 1665 ms
+Cached   (100 iterations): 29 ms
+Speedup: 57.4x faster
+Cache stats: CacheStats{hits=99, misses=2, hitRatio=98.0%,
+    evictions=0, invalidations=0, avgHitTime=1.30us, avgMissTime=6.96ms}
 
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
     -- in com.queryplancache.engine.QueryEngineTest$PerformanceComparison
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
-    -- in com.queryplancache.engine.QueryEngineTest$CacheKeyComputation
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
-    -- in com.queryplancache.engine.QueryEngineTest$DdlInvalidation
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
     -- in com.queryplancache.engine.QueryEngineTest$CacheClearCorrectness
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+    -- in com.queryplancache.engine.QueryEngineTest$DdlInvalidation
 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
     -- in com.queryplancache.engine.QueryEngineTest$CacheHitMissFlow
 
@@ -350,7 +350,8 @@ Hit ratio: 99.0%
 [INFO] -------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] -------------------------------------------------------
-[INFO] Total time:  8.928 s
+[INFO] Total time:  24.992 s
+[INFO] Finished at: 2026-05-08T12:37:14+05:30
 ------------------------------------------------------------
 
 ============================================================
